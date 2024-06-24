@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Product</title>
+    <link rel="stylesheet" type="text/css" href="/src/styles.css">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="nav-header">
+            <!-- nav-header -->
+            <div class="container">
+                <div class="nav-header__hamburger-menu nav-header__hamburger-menu--show mobile-menu">
+                    <span class="nav-header__bar nav-header__bar1"></span>
+                    <span class="nav-header__bar nav-header__bar2"></span>
+                    <span class="nav-header__bar nav-header__bar3"></span>
+                </div>
+                <a class="nav-header__logo" href="#">/enia</a>
+                <!-- nav-header nav-list -->
+                <div class="nav-header__nav-list-wrap" id="navListWrap">
+                    <ul class="nav-header__nav-list">
+                        <li class="nav-header__nav-item nav-header__nav-item--active">
+                            <a href="#" class="nav-header__nav-link">Home</a>
+                        </li>
+                        <li class="nav-header__nav-item">
+                            <a href="#" class="nav-header__nav-link">Women</a>
+                        </li>
+                        <li class="nav-header__nav-item">
+                            <a href="#" class="nav-header__nav-link">Men</a>
+                        </li>
+                        <li class="nav-header__nav-item">
+                            <a href="#" class="nav-header__nav-link">Smart Gear</a>
+                        </li>
+                        <li class="nav-header__nav-item">
+                            <a href="#" class="nav-header__nav-link">Accessories</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-header__nav-cart">
+                    <img src="assets/images/cart.png" alt="icon" class="nav-header__icon-img">
+                    <span class="nav-header__active-count">1</span>
+                </div>                
+            </div>
+        </div>
+    </header>    
+
+    <main>
+        <h1 class="cm-not-in-page">Product Listing Page</h1>
+        <div class="pg-plp">
+            <section>
+                <div class="top-banner">
+                    <div class="top-banner__content">
+                        <h1 class="top-banner__title">Men's Outerwear</h1>
+                    </div>
+                    <div class="top-banner__image-wrapper">
+                        <img src="assets/images/en-1.jpg" alt="Men's Outerwear" class="top-banner__image">
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="bs-sec typ-plp">
+                    <div class="container">
+                        <div class="sec-cont">
+                            <div class="product">
+                                <div class="product__filter-wrap">
+                                    <div class="product__side-heading-wrap">
+                                        <h3 class="product__side-heading">Clothing/ Women's/ Outerwear</h3>
+                                      </div>
+                                    <div class="product__filter " id="productFilter">
+                                        <a href="javascript:void(0)" class="product__filter-close">x</a>
+                                        <h2 class="product__filter-title">Filters</h2>
+                                        <ul class="product__checkbox-list">
+                                            <h3 class="product__filter-subTitle">Categories</h3>
+                                            <li class="product__checkbox-item">
+                                                <div class="bs-checkbox typ-plp">
+                                                    <input class="checkbox-input" type="checkbox" name="categories-type" id="jewelery" value="jewelery">
+                                                    <label for="jewelery">Jewellery</label>
+                                                </div>
+                                            </li>
+                                            <li class="product__checkbox-item">
+                                                <div class="bs-checkbox typ-plp">
+                                                    <input class="checkbox-input" type="checkbox" name="categories-type" id="electronics" value="electronics">
+                                                    <label for="electronics">Electronics</label>
+                                                </div>
+                                            </li>
+                                            <li class="product__checkbox-item">
+                                                <div class="bs-checkbox typ-plp">
+                                                    <input class="checkbox-input" type="checkbox" name="categories-type" id="mens-clothing" value="men's clothing">
+                                                    <label for="mens-clothing">Men's Clothing</label>
+                                                </div>
+                                            </li>
+                                            <li class="product__checkbox-item">
+                                                <div class="bs-checkbox typ-plp">
+                                                    <input class="checkbox-input" type="checkbox" name="categories-type" id="women-clothing" value="women's clothing">
+                                                    <label for="women-clothing">Women's Clothing</label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="product__product-wrap">
+                                    <div class="product__product-head">                                       
+                                        <span class="product__product-result">Results</span>
+                                        <ul class="product__product-group">
+                                            <li class="product__product-block">
+                                                <button class="product__product-icon mobile-filter" aria-label="Filter Results">
+                                                    <img src="assets/images/sliders.svg" class="icon-slide" alt="Filter Icon"/>
+                                                    <span class="product__icon-label">Filter Results</span>
+                                                </button>
+                                            </li>
+                                            <li class="product__product-block">
+                                                <input type="text" class="product__search-bar" id="searchBar" placeholder="Search products..." />
+                                            </li>
+                                            <li class="product__product-block">
+                                                <div class="product__product-sort">
+                                                    <select class="product__product-select" name="sort" id="sort">
+                                                        <option class="product__option" value="LowToHigh">Price: Low to High</option>
+                                                        <option class="product__option" value="HighToLow">Price: High to Low</option>
+                                                    </select>
+                                                </div>
+                                            </li>
+                                            
+                                        </ul>
+                                        
+                                    </div>
+                                    <div class="product__loading" id="loading">Loading...</div>
+                                    <ul class="product__product-list" id="productList">
+                                        <!-- product list -->
+                                    </ul>
+                                    <button class="product__loadMore" id="loadMore" style="display: none;">Load More</button>
+                                    <ul class="product__pagination">
+                                        <!-- pagination -->
+                                    </ul>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>           
+        </div>
+    </main>
+    <!-- Footer  -->
+    <footer class="footer">
+        <div class="container">
+          <ul class="footer__nav-items">
+            <li class="footer__nav-item">
+              <h3 class="footer__heading">Account</h3>
+              <ul class="footer__items">
+                <li class="footer__items-item"><a href="#" class="footer__link">Sign In</a></li>
+                <li class="footer__items-item"><a href="#" class="footer__link">Register</a></li>
+                <li class="footer__items-item"><a href="#" class="footer__link">Order Status</a></li>
+              </ul>
+            </li>
+            <li class="footer__nav-item">
+              <h3 class="footer__heading">About Us</h3>
+              <ul class="footer__items">
+                <li class="footer__items-item"><a href="#" class="footer__link">Our Story</a></li>
+                <li class="footer__items-item"><a href="#" class="footer__link">Careers</a></li>
+              </ul>
+            </li>
+            <li class="footer__nav-item">
+              <h3 class="footer__heading">Help</h3>
+              <ul class="footer__items">
+                <li class="footer__items-item"><a href="#" class="footer__link">Contact Us</a></li>
+                <li class="footer__items-item"><a href="#" class="footer__link">Order Status</a></li>
+                <li class="footer__items-item"><a href="#" class="footer__link">Returns</a></li>
+              </ul>
+            </li>
+            <li class="footer__nav-item">
+              <h3 class="footer__heading">Follow Us!</h3>
+              <p class="footer__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+              <ul class="footer__social-items">
+                <li class="footer__social-items-item"><a href="#" class="footer__social-link"><img src="assets/images/instagram.svg" alt="icon" class="footer__social-icon"></a></li>
+                <li class="footer__social-items-item"><a href="#" class="footer__social-link"><img src="assets/images/facebook.svg" alt="icon" class="footer__social-icon"></a></li>
+                <li class="footer__social-items-item"><a href="#" class="footer__social-link"><img src="assets/images/twitter.svg" alt="icon" class="footer__social-icon"></a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__info">
+            <div class="container">
+                <ul class="footer__info-items">
+                    <div class="footer__info-item footer__logo">
+                        <a href="#" class="footer__logo-link">VENIA</a>
+                    </div>
+                    <div class="footer__info-item footer__copyright">
+                        <p class="footer__copyright-text">© Company Name Address Ave, City Name, State ZIP</p>
+                    </div>
+                    <ul class="footer__info-item footer__links">
+                        <li class="footer__links-item"><a href="#" class="footer__link">Terms of Use</a></li>
+                        <li class="footer__links-item"><a href="#" class="footer__link">Privacy Policy</a></li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- script -->
+    <script src="/src/index.js"></script>
+
+</body>
+
+</html>

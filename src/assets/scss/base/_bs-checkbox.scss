@@ -1,0 +1,61 @@
+//bs-checkbox
+.bs-checkbox {
+    margin-bottom: 0;
+    input[type="checkbox"] {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        left: -999px;
+        z-index: -1;
+        +label {
+            font-size: 1.6rem;
+            font-family: $font-regular;
+            line-height: 2.2rem;
+            color: #181C24;
+            padding-left: 3rem;
+            position: relative;
+            transition: all 0.2s;
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                border: 1px solid #91959C;
+                width: 2rem;
+                transition: all 0.2s;
+                height: 2rem;
+                top: -0.2rem;
+                border-radius: 0.5rem;
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                left: 0.5rem;
+                width: 1rem;
+                transition: all 0.2s;
+                height: 0.5rem;
+                transform: scale(0) rotate(-40deg);
+                top: 0.4rem;
+                border-bottom: 2px solid $clr-primary;
+                border-left: 2px solid $clr-primary;
+            }
+            .note {
+                margin-top: 0.5rem;
+                font-size: 1.2rem;
+                line-height: 1.6rem;
+                font-family: $font-regular;
+                color: $clr-para;
+                display: block;
+            }
+        }
+        &:checked {
+            +label {
+                &:before {
+                    border-color: $clr-primary;
+                }
+                &:after {
+                    transform: scale(1) rotate(-40deg);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    @media (min-width: 1024px) and (max-width: 1200px) {
+      font-size: 8.2px;
+    }
+    @media (min-width: 1279px) and (max-width: 1400px) {
+      font-size: 8.9px;
+    }
+    @media (min-width: 1600px) {
+      font-size: 12.4px;
+    }
+}
+
+body {
+    font-family: $font-regular;
+    background: $clr-white;
+    font-size: 1.6rem;
+    width: 100%;
+    color: $clr-black;
+    overflow-x: hidden;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    transition: all 0.2s;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-family: $font-regular;
+    color: $clr-para;
+    text-transform: initial;
+    @media only screen and (max-width: $media-sm) {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+    }
+}
+
+.main {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.cm-not-in-page {
+    position: absolute;
+    left: -99999px;
+    top: -99999px;
+}
+
+.cm-line-break {
+    display: block;
+}
+
+.cm-overlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
+    transition: .5s ease-in-out;
+    background: rgba(247, 247, 247, .7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    &.active {
+        visibility: visible;
+        opacity: 1;
+        z-index: 10;
+        display: block;
+    }
+}
+
+.container {
+    margin: 0px auto;
+    padding: 0px;
+    width: 81.82%;
+    @media only screen and (max-width: $media-sm) {
+        width: 100%;
+        padding: 0rem 2.5rem;
+        max-width: auto;
+    }
+}
+
+.cm-mobile {
+    display: none !important;
+    @media only screen and (max-width: $media-sm) {
+        display: block !important;
+    }
+}
+
+.cm-desktop {
+    display: block !important;
+    @media only screen and (max-width: $media-sm) {
+        display: none !important;
+    }
+}
+  
+
+.cm-bold {
+    font-family: $font-bold;
+}
+
+.cm-light {
+    font-family: $font-light;
+}
+
+.cm-regular {
+    font-family: $font-regular;
+}
+
+.hide {
+    display: none !important;
+}

@@ -1,0 +1,107 @@
+//box-shadow
+@mixin box-shadow($left, $top, $radius, $color) {
+    box-shadow: $left $top $radius $color;
+    -webkit-box-shadow: $left $top $radius $color;
+    -moz-box-shadow: $left $top $radius $color;
+}
+
+//transition
+@mixin transition($property, $duration, $easing) {
+    transition: $property $duration $easing;
+    -webkit-transition: $property $duration $easing;
+    -moz-transition: $property $duration $easing;
+}
+
+//border-radius
+@mixin border-radius($radius) {
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+}
+
+
+/*transform*/
+
+@mixin transform($prop) {
+    -webkit-transform: $prop;
+    -moz-transform: $prop;
+    -ms-transform: $prop;
+    -o-transform: $prop;
+    transform: $prop;
+}
+
+
+/*transform*/
+
+
+/*opacity*/
+
+@mixin opacity($value) {
+    $IEValue: $value*100;
+    opacity: $value;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+    filter: alpha(opacity=$IEValue);
+}
+
+
+/*opacity- end*/
+
+//View port 
+@function get-vw($target) {
+    $vw-context: (1300 * 0.01) * 1px;
+    @return ($target / $vw-context) * 1vw;
+}
+
+//input-placeholder 
+@mixin input-placeholder {
+    &.placeholder {
+        @content;
+    }
+    &:-moz-placeholder {
+        @content;
+    }
+    &::-moz-placeholder {
+        @content;
+    }
+    &:-ms-input-placeholder {
+        @content;
+    }
+    &::-webkit-input-placeholder {
+        @content;
+    }
+}
+
+@mixin media($point) {
+    @if $point==xs {
+        @media (max-width: $media-xs) {
+            @content;
+        }
+    }
+    @else if $point==sm {
+        @media (max-width: $media-xs) {
+            @content;
+        }
+    }
+    @else if $point==md {
+        @media (max-width: $media-md) {
+            @content;
+        }
+    }
+    @else if $point==lg {
+        @media (max-width: $media-lg) {
+            @content;
+        }
+    }
+    @else if $point==xl {
+        @media (max-width: $media-xl) {
+            @content;
+        }
+    }
+}
+
+//vw calculator
+@function get-vw($target) {
+    $vw-context: (1280*.01) * 1px;
+    $test: ($target/$vw-context) * 1vw;
+    @return $test;
+}

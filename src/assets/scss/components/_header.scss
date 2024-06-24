@@ -1,0 +1,188 @@
+.nav-header {
+    width: 100%;
+    height:80px;
+    padding-top: 30px;
+    @include transition(all, 0.5s, ease-in-out);
+    z-index: 9;
+    background: $clr-primary;
+
+    @media only screen and (max-width: $media-sm) {
+        height:56px;
+        padding: 1.4rem 0;
+    }
+
+    &--fixed {
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 10%);
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    &__hamburger-menu {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+        @include transition(all, 0.3s, ease-in-out);
+        display: none;
+
+        @media only screen and (max-width: $media-sm) {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .nav-header__bar {
+            margin: 0;
+            padding: 0;
+            width: 2rem;
+            height: 0.1rem;
+            display: block;
+            background: $clr-white;
+            @include transition(all, 0.5s, ease-in-out);
+            position: relative;
+            left: 0;
+
+            &:not(:last-child) {
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
+
+    &__logo {
+        font-size: 2.2rem;
+        line-height: 2.2rem;
+        color: $clr-white;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-family: sans-serif;
+
+        @media only screen and (max-width: $media-sm) {
+            font-size: 2rem;
+            line-height: 2rem;
+        }
+    }
+
+    &__nav-list-wrap {
+        @media only screen and (max-width: $media-sm) {
+            position: absolute;
+            width: 100%;
+            height: calc(100vh - 4.8rem);
+            left: -100%;
+            top: 4.8rem;
+            background: $clr-primary;
+            z-index: 9;
+            @include transition(left, 0.7s, ease-in-out);
+        }
+
+        &--show {
+            @media only screen and (max-width: $media-sm) {
+                left: 0%;
+            }
+        }
+    }
+
+    &__nav-list {
+        display: flex;
+
+        @media only screen and (max-width: $media-sm) {
+            flex-direction: column;
+        }
+
+        .nav-header__nav-item {
+            padding: 0 1.6rem 2.8rem 1.6rem;
+
+            @media only screen and (max-width: $media-sm) {
+                padding: 1rem 2.5rem;
+                border-bottom: 0.5px solid $clr-white;
+            }
+
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0.5rem;
+                left: 0;
+                background: $clr-white;
+                height: 7%;
+                width: 0%;
+                @include transition(all, 0.5s, ease-in-out);
+
+                @media only screen and (max-width: $media-sm) {
+                    height: 0.3rem;
+                    display: none;
+                }
+            }
+
+            &--active,
+            &:active,
+            &:hover {
+                &::after {
+                    width: 100%;
+                }
+
+                @media only screen and (max-width: $media-sm) {
+                    .nav-header__nav-link {
+                        font-family: $font-semibold;
+                    }
+                }
+            }
+
+            .nav-header__nav-link {
+                font-family: $font-regular;
+                font-size: 1.6rem;
+                line-height: 2.4rem;
+                color: $clr-white;
+                @include transition(all, 0.5s, ease-in-out);
+            }
+        }
+    }
+
+    &__nav-cart {
+        position: relative;
+
+        .nav-header__icon-img {
+            width: 2.2rem;
+            height: 2.2rem;
+
+            @media only screen and (max-width: $media-sm) {
+                width: 1.8rem;
+                height: 1.8rem;
+            }
+        }
+
+        .nav-header__active-count {
+            width: 1.5rem;
+            height: 1.5rem;
+            padding: 0.2rem;
+            border: solid 1px #06283D;
+            background-color: #06283D;
+            display: inline-block;
+            font-family: $font-semibold;
+            font-size: 0.7rem;
+            text-align: center;
+            line-height: 0.9rem;
+            color: $clr-white;
+            border-radius: 50%;
+            position: absolute;
+            top: -5px;
+            right: -6px;
+
+            @media only screen and (max-width: $media-sm) {
+                width: 1.2rem;
+                height: 1.2rem;
+                font-size: 0.5rem;
+                line-height: 0.7rem;
+                top: -4px;
+                right: -4px;
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+/* colors */
+
+$clr-white:#ffffff;
+$clr-black:#000000;
+$clr-primary:#1363DF;
+$clr-border:#E5E5E7;
+$clr-para: #172026;
+
+/*font family*/
+
+// Muli
+$font-light:'Muli-Light'; // 300
+$font-regular:'Muli-Regular'; //400 
+$font-semibold:'Muli-SemiBold'; //600
+$font-bold:'Muli-Bold'; //700
+$font-extraBold:'Muli-ExtraBold'; //800
+$font-black:'Muli-Black'; //900
+
+/* breakpoints */
+
+$media-xs:576px;
+$media-sm:768px;
+$media-md:1024px;
+$media-lg:1366px;
+$media-xl:1600px;

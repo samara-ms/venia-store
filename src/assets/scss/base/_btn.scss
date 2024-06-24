@@ -1,0 +1,96 @@
+// btn
+.btn {
+    display: inline-block;
+    font-family: $font-bold;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .6rem 1.2rem;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    text-transform: uppercase;
+    color: $clr-white;
+    min-width: 24rem;
+    padding: 1.4rem;
+    background-color: $clr-primary;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    // box-shadow: 0 0 10px 0 rgba(0, 125, 255, 0.3);
+    @media only screen and (max-width: $media-sm) {
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+    }
+    &:hover {
+        text-decoration: none;
+    }
+    &.btn-default {
+        font-family: $font-bold;
+        background-color: $clr-primary;
+        padding: 1.7rem;
+        min-width: 17.1rem;
+        margin-bottom: 3.8rem;
+        @media only screen and (max-width: $media-sm) {
+            min-width: 12.2rem;
+            padding: 1.4rem;
+        }
+        &:hover {
+            background-color: $clr-white;
+            color: $clr-primary;
+            border: 1px solid $clr-primary;
+        }
+        &:disabled {
+            background-color: #e5f1ff;
+        }
+    }
+    &.btn-outline {
+        color: $clr-primary;
+        background-color: transparent;
+        border: 1px solid $clr-primary;
+        &:disabled {
+            opacity: .5;
+        }
+    }
+    &.btn-icon-link {
+        background: transparent;
+        padding: 0;
+        color: $clr-primary;
+        min-width: auto;
+        border: none;
+        box-shadow: none;
+        display: flex;
+        align-items: center;
+        &.green {
+            color: #4b9800;
+            text-transform: capitalize;
+        }
+        &.compare-btn {
+            .removeCompare {
+                display: none;
+                color: #721c23;
+                .icon {
+                    color: #721c23;
+                }
+            }
+            &.active {
+                .removeCompare {
+                    display: inline-block;
+                }
+                .addCompare {
+                    display: none;
+                }
+            }
+        }
+    }
+    &.btn-link {
+        background: transparent;
+        padding: 0;
+        color: $clr-primary;
+        min-width: auto;
+        border: none;
+        box-shadow: none;
+    }
+}

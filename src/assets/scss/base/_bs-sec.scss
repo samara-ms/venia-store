@@ -1,0 +1,96 @@
+.bs-sec {
+    margin: 7.5rem 0rem;
+    @media only screen and (max-width: $media-sm) {
+        margin: 4rem 0px;
+    }
+    .sec-head {
+        margin-bottom: 3rem;
+        position: relative;
+        @media only screen and (max-width: $media-sm) {
+            margin-bottom: 2.4rem;
+        }
+        .sec-title {
+            font-size: 6.4rem;
+            line-height: 6.4rem;
+            color: $clr-black;
+            font-family: $font-bold;
+            margin-bottom: 1.2rem;
+            letter-spacing: -1px;
+            // text-transform: capitalize;
+            @media only screen and (max-width: $media-sm) {
+                font-size: 3rem;
+                line-height: 3rem;
+                margin-bottom: 1rem;
+            }
+        }
+        .sec-desc {
+            font-size: 2.4rem;
+            line-height: 2.4rem;
+            font-family: $font-regular;
+            color: $clr-primary;
+            @media only screen and (max-width: $media-sm) {
+                font-size: 1.4rem;
+                line-height: 1.4rem;
+            }
+        }
+        .btn-wrap {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            display: inline-block;
+            .btn {
+                margin-bottom: 0;
+            }
+        }
+        &.typ-cart {
+            display: flex;
+            @media only screen and (max-width: 1024px) {
+                display: block;
+            }
+        }
+        &.typ-center {
+            text-align: center;
+        }
+        &.typ-storeLocatore-hd {
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .sec-title {
+                font-size: 2.4rem;
+                line-height: normal;
+                @media only screen and (max-width: $media-sm) {
+                    font-size: 1.8rem;
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &.typ-bookTest {
+            margin-bottom: 2rem;
+            .sec-title {
+                font-size: 2.4rem;
+                line-height: normal;
+                @media only screen and (max-width: $media-sm) {
+                    font-size: 1.8rem;
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &.typ-productOffer {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            .btn.btn-default {
+                margin: 0
+            }
+            .lhs {
+                @media only screen and (max-width: $media-sm) {
+                    width: 16REM;
+                }
+            }
+        }
+    }  
+    &.typ-plp{
+        margin: 4.5rem 0 6rem;
+    }
+}

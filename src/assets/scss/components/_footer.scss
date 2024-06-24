@@ -1,0 +1,183 @@
+//footer
+.footer {
+    border-top: 2px solid $clr-border;
+
+    .footer__nav-items {
+        padding: 4rem 0 3.2rem;
+        display: flex;
+        justify-content: space-between;
+
+        @media only screen and (max-width: $media-sm) {
+            padding: 5.6rem 0 8rem;
+            flex-wrap: wrap;
+        }
+
+        .footer__nav-item {
+            width: 25%;
+
+            @media only screen and (max-width: $media-sm) {
+                width: 100%;
+            }
+        }
+
+        .footer__heading {
+            margin-bottom: 1.6rem;
+            font-family: $font-semibold;
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            color: $clr-para;
+        }
+
+        .footer__items {
+            .footer__items-item {
+                margin-bottom: 0.8rem;
+
+                @media only screen and (max-width: $media-sm) {
+                    margin-bottom: 1.6rem;
+                }
+
+                &:last-child {
+                    @media only screen and (max-width: $media-sm) {
+                        margin-bottom: 3.2rem;
+                    }
+                }
+
+                &:hover .footer__link::after {
+                    width: 100%;
+                }
+
+                .footer__link {
+                    font-size: 1.6rem;
+                    line-height: 2.4rem;
+                    color: #545D63;
+                    position: relative;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        height: 1px;
+                        width: 0;
+                        background: #545D63;
+                        bottom: -1px;
+                        left: 0;
+                        @include transition(all, 0.5s, ease-in-out);
+                    }
+                }
+            }
+        }
+
+        .footer__text {
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            color: #545D63;
+            margin-bottom: 1.1rem;
+        }
+
+        .footer__social-items {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            .footer__social-items-item {
+                margin-right: 2.5rem;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                .footer__social-link {
+                    width: 2rem;
+                    height: 2rem;
+
+                    .footer__social-icon {
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer__info {
+        border-top: 1px solid $clr-border;
+        padding: 2.5rem 0;
+
+        @media only screen and (max-width: $media-sm) {
+            padding: 3.2rem 0 4.7rem;
+        }
+
+        .footer__info-items {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+
+            @media only screen and (max-width: $media-sm) {
+                flex-wrap: wrap;
+                flex-direction: column-reverse;
+                justify-content: center;
+            }
+
+            .footer__info-item {
+                width: auto;
+
+                @media only screen and (max-width: $media-sm) {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+
+        .footer__logo-link {
+            font-size: 1.8rem;
+            line-height: 2rem;
+            color: #181C24;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: sans-serif;
+            display: inline-block;
+
+            @media only screen and (max-width: $media-sm) {
+                margin-top: 4rem;
+            }
+        }
+
+        .footer__copyright-text {
+            font-size: 1.4rem;
+            line-height: 1.8rem;
+            color: #545D63;
+            letter-spacing: 0.1rem;
+            @media only screen and (max-width: $media-sm) {
+                text-align: center;
+            }
+        }
+
+        .footer__links {
+            display: flex;
+            justify-content: flex-end;
+
+            @media only screen and (max-width: $media-sm) {
+                justify-content: center;
+                margin-bottom: 2.5rem;
+            }
+
+            .footer__links-item {
+                margin-right: 1rem;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                .footer__link {
+                    color: $clr-para;
+                    font-size: 1.4rem;
+                    line-height: 1.8rem;
+                    text-decoration: underline;
+                    @include transition(all, 0.5s, ease-in-out);
+
+                    @media only screen and (max-width: $media-sm) {
+                        margin-right: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}
