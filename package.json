@@ -16,6 +16,7 @@
     "javascript"
   ],
   "dependencies": {
-    "sass": "^1.77.6"
+    "sass": "^1.77.6",
+    "scss": "^0.2.4"
   }
 }

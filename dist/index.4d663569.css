@@ -615,6 +615,60 @@ p {
   margin: 4.5rem 0 6rem;
 }
 
+@font-face {
+  font-family: Muli-Regular;
+  src: url("Muli-Regular.fee5925e.eot");
+  src: url("Muli-Regular.fee5925e.eot#iefix") format("embedded-opentype"), url("Muli-Regular.443846c3.woff2") format("woff2"), url("Muli-Regular.a0bea680.woff") format("woff"), url("Muli-Regular.d9cb6bf6.ttf") format("truetype"), url("Muli-Regular.66177307.svg#Muli-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Muli-SemiBold;
+  src: url("Muli-SemiBold.2f3919a4.eot");
+  src: url("Muli-SemiBold.2f3919a4.eot#iefix") format("embedded-opentype"), url("Muli-SemiBold.d6314584.woff2") format("woff2"), url("Muli-SemiBold.1826349c.woff") format("woff"), url("Muli-SemiBold.e2f3503d.ttf") format("truetype"), url("Muli-SemiBold.e97c625e.svg#Muli-SemiBold") format("svg");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Muli-Light;
+  src: url("Muli-Light.4a35b273.eot");
+  src: url("Muli-Light.4a35b273.eot#iefix") format("embedded-opentype"), url("Muli-Light.40d60d08.woff2") format("woff2"), url("Muli-Light.a4fcbb13.woff") format("woff"), url("Muli-Light.bb009823.ttf") format("truetype"), url("Muli-Light.9cb21af4.svg#Muli-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Muli-Black;
+  src: url("Muli-Black.95f68052.eot");
+  src: url("Muli-Black.95f68052.eot#iefix") format("embedded-opentype"), url("Muli-Black.cfc06bf7.woff2") format("woff2"), url("Muli-Black.855008f3.woff") format("woff"), url("Muli-Black.3e3f1b7d.ttf") format("truetype"), url("Muli-Black.4fd059dc.svg#Muli-Black") format("svg");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Muli-ExtraBold;
+  src: url("Muli-ExtraBold.7fc17b09.eot");
+  src: url("Muli-ExtraBold.7fc17b09.eot#iefix") format("embedded-opentype"), url("Muli-ExtraBold.6193147e.woff2") format("woff2"), url("Muli-ExtraBold.83877a36.woff") format("woff"), url("Muli-ExtraBold.f8185e95.ttf") format("truetype"), url("Muli-ExtraBold.6050c796.svg#Muli-ExtraBold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Muli-Bold;
+  src: url("Muli-Bold.47cf90c5.eot");
+  src: url("Muli-Bold.47cf90c5.eot#iefix") format("embedded-opentype"), url("Muli-Bold.7e5707ff.woff2") format("woff2"), url("Muli-Bold.980372d3.woff") format("woff"), url("Muli-Bold.ed0471b9.ttf") format("truetype"), url("Muli-Bold.2efa542c.svg#Muli-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 .top-banner {
   justify-content: space-between;
   height: 352px;
@@ -809,6 +863,10 @@ p {
 
 .product .product__filter .product__checkbox-list .product__checkbox-item {
   margin-bottom: 1.5rem;
+}
+
+.product .product__filter .product__checkbox-list .product__checkbox-item .checkbox-input {
+  margin-right: 10px;
 }
 
 .product .product__product-wrap {

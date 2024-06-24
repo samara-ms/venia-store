@@ -1,3 +1,5 @@
+import heartIcon from './assets/images/heart.png';
+
 document.addEventListener('DOMContentLoaded', function () {
     const mobileMenu = document.querySelector('.mobile-menu');
     const navListWrap = document.getElementById('navListWrap');
@@ -149,7 +151,7 @@ const Plp = {
                         <h3 class="product__product-title">${item.title.substring(0, 30)}</h3>
                         <p class="product__product-price">$${item.price}</p>
                         <button class="product__add-to-cart">
-                            <img src="assets/images/heart.png" alt="cart icon" class="product__cart-icon">
+                            <img src="${heartIcon}" alt="cart icon" class="product__cart-icon">
                         </button>
                     </div>
                 </li>`;
